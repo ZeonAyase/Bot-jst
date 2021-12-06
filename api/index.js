@@ -40,7 +40,7 @@ bot.on('message', (msg) => {
 		 parseFloat(s[0]), // string to float
 		 parseFloat(s[0])
 	     ]
-	 }.then((jres)=>{
+	 ).then((jres)=>{
 	     bot.sendMessage(
 		 msg.chat.id,
 		 'Nilai v yang diprediksi adalah $(jres[0]) volt'
