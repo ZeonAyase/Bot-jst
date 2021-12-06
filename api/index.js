@@ -23,7 +23,6 @@ bot.onText(/\/start/, (msg) => {
 // input requirement i and r 
 state = 0;
 bot.onText(/\/predict/, (msg) => { 
-    console.log(msg)
     bot.sendMessage(
         msg.chat.id,
         `Masukan nilai i / v .Contohnya 9 / 9`
@@ -41,7 +40,7 @@ bot.on(message), (msg) => {
                 parseFloat(s[0]), //string to float
                 parseFloat(s[1])
             ]
-        ).then((jres))=>{
+        ).then((jres)=>{
             bot.sendMessage(
                 msg.chat.id,
                 'Nilai v yang diprediksi adalah s(jres[0]) volt'
