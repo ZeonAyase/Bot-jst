@@ -25,7 +25,7 @@ state = 0;
 bot.onText(/\/predict/, (msg) =>(
 	bot.sendMessage(
 		msg.chat.id,
-		.Masukan nilai i|v. Contohnya 6|2'
+		'Masukan nilai i|v. Contohnya 6|2'
 	);
 	state = 1;
 ));
