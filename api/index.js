@@ -6,7 +6,7 @@ const model = require('./sdk/model.js');
 
 // Bot Setting
 const TelegramBot = require('node-telegram-bot-api');
-const token = '5018882223:AAGmHJoDlgh-defHVhu3w-idGNEKaPYBi_c'
+const token = '1733547356:AAEOX7oG_z09vS34M-DUHOm5YCPsXYDXohg'
 const bot = new TelegramBot(token, {polling: true});
 
 
@@ -20,16 +20,15 @@ bot.onText(/\/start/, (msg) => {
     );   
 });
 
-// Input requires i and r
+//input requires i and v
 state = 0;
-bot.onText(/\/predict/, (msg) =>(
+bot.onText(/\/predict/, (msg) => { 
     bot.sendMessage(
         msg.chat.id,
-    	'Masukan nilai i|v. Contohnya 6|2'
+        `Masukan nilai i|v. Contohnya 6|2`
     );
     state = 1;
-));
-
+});
 
 // routers
 r.get('/prediction/:i/:r', function(req, res, next) {    
