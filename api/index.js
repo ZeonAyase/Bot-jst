@@ -23,7 +23,6 @@ bot.onText(/\/start/, (msg) => {
 // input requires i and r
 state = 0
 bot.onText(/\/predict/, (msg) => { 
-    console.log(msg)
     bot.sendMessage(
         msg.chat.id,
         `Masukan nilai i|v. Contohnya 6|2`
