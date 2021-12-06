@@ -16,11 +16,13 @@ bot.onText(/\/start/, (msg) => {
     bot.sendMessage(
         msg.chat.id,
         `hello ${msg.chat.first_name}, welcome...\n
-        click /menu to main menu`
+        click /predict`
     );
 });
 
-bot.onText(/\/menu/, (msg) => { 
+// input requirement i and r 
+state = 0;
+bot.onText(/\/predict/, (msg) => { 
     console.log(msg)
     bot.sendMessage(
         msg.chat.id,
