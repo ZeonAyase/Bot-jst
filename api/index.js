@@ -20,15 +20,15 @@ bot.onText(/\/start/, (msg) => {
     );   
 });
 
-// input requires i and r
-state = 0
-bot.onText(/\/predict/, (msg) => { 
-    bot.sendMessage(
-        msg.chat.id,
-        `Masukan nilai i|v. Contohnya 6|2`
-    );
-    state = 1;
-});
+// Input requires i and r
+state = 0;
+bot.onText(/\/predict/, (msg) =>(
+	bot.sendMessage(
+		msg.chat.id,
+		.Masukan nilai i|v. Contohnya 6|2'
+	);
+	state = 1;
+));
 
 bot.on('message', (msg) => {
 	if (state == 1) {
@@ -37,7 +37,7 @@ bot.on('message', (msg) => {
 		v = s[1]
 		model.predict(
 			[
-				parseFloat(s[0]),
+				parseFloat(s[0]), // string to float
 				parseFloat(s[0])
 			]
 		}.then((jres)=>{
