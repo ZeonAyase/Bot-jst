@@ -46,7 +46,7 @@ bot.on('message', (msg) => {
 		 'Nilai v yang diprediksi adalah $(jres[0]) volt'
 	     );
 	     bot.sendMessage(
-	    	 msg.chat.id
+	    	 msg.chat.id,
 	         'Nilai p yang diprediksi adalah $(jres[1]) watt'
 	     );
         })
